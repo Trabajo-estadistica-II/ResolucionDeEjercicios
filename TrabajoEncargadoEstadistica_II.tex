@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper,oneside,numbers,x11names,table]{report}                                                  
+% Dimensiones y márgenes.
+\usepackage[margin=2.54cm]{geometry}%todos los margenes 1 pulgada(in ) o 2.54 cm
+% Entrada de acentos en este documento .
+\usepackage[utf8]{inputenc}
+
+
+%----------------------------------------------------------------------
+\input{PlantillaMongrafiav1}% = Paquetes y código de diseño
+%----------------------------------------------------------------------
+
+\renewcommand{\tablename}{Tabla}
+\definecolor{bulgarianrose}{rgb}{0.28, 0.02, 0.03}
+\definecolor{styrmitcrwcgray1}{rgb}{0.2,0.2,0.2}
+\definecolor{wcgray}{rgb}{0,0.1333,0.3333}
+\usetikzlibrary{arrows}
+\usepackage{makeidx}
+\makeindex
+\usepackage{fourier} % Fuente global
+% Insertar  páginas .pdf
+\usepackage{pdfpages}
+%Para incluir figuras, sin reparar en la extensión, se debe poner en el preámbulo
+\usepackage{graphicx}
+\DeclareGraphicsExtensions {.jpg,.pdf,.png} % busca en este orden!
+
+
+
+%==========================================================
+%cuerpo del contenido
+%==========================================================
+
+\begin{document}
+\renewcommand{\figurename}{\textit{Figura}} %Cambia la palabra "Figura" por una en cursiva
+\renewcommand\thefigure{\textit{\arabic{figure}}} % Genera numeración 1,2,...
+
+
+\pagenumbering{arabic} 
+\pagestyle{fancy} %decoracion de cabecera numero de pagina en colorcito y cuadro
+\setlength{\parindent}{5ex}%Sangria: Es necesario dejar  5 espacios en la primera línea de cada párrafo.
+\doublespace%doble interlineado usa paquete \usepackage{setspace}
+%=============================================================================
+
+%caratula
+\input{caratula.tex}
+\doublespace%doble interlineado usa paquete \usepackage{setspace}
+
+
+%dedicatoria
+
+
+%presentación
+
+%INDICE
+\singlespace
+\tableofcontents
+\doublespace
+%introducción
+%\input{introduccion.tex}
+
+% Estableciendo nombre del capitulo I
+\chapter{Resolucion de Ejercicios }
+
+%CAPITULO 1
+\input{cap1.tex}
+
+%CAPITULO 2
+%\input{cap2.tex}
+
+%CAPITULO 3
+%\input{cap3.tex}
+
+
+%CONCLUCIÓN
+%\input{conclucion.tex}
+
+%bibliografia
+%\input{bibliografia.tex}
+
+\end{document}
